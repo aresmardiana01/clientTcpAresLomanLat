@@ -1,3 +1,4 @@
+require('dotenv').config()
 const net = require('net')
 const JsonSocket = require('json-socket')
 
@@ -34,4 +35,4 @@ socket.on ('connect',()=>{
     })
 })
 
-socket.connect(31115,'172.20.10.211')
+socket.connect(process.env.PORT,process.env.IP)
